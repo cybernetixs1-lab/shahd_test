@@ -1,0 +1,299 @@
+:root {
+  color-scheme: light;
+  --background: #f4f6fa;
+  --surface: #ffffff;
+  --text: #172033;
+  --muted: #667085;
+  --border: #e4e7ec;
+  --primary: #3157d5;
+  --primary-hover: #2446b6;
+  --danger: #b42318;
+  --danger-bg: #fef3f2;
+  --success: #067647;
+  --success-bg: #ecfdf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+a {
+  color: var(--primary);
+}
+
+.page-shell {
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+  padding: 56px 0 24px;
+}
+
+.staff-shell {
+  width: min(100% - 32px, 1100px);
+}
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  margin: 4px 0 8px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.panel {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgb(16 24 40 / 5%);
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.panel form {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.panel label {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.panel input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 9px;
+  background: white;
+  color: var(--text);
+}
+
+.panel input:focus {
+  outline: 3px solid rgb(49 87 213 / 15%);
+  border-color: var(--primary);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 15px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.secondary {
+  border-color: var(--border);
+  background: white;
+  color: var(--text);
+}
+
+.secondary:hover:not(:disabled) {
+  background: #f9fafb;
+}
+
+.danger {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.danger:hover:not(:disabled) {
+  background: #fee4e2;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.alert {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f2f4f7;
+  color: var(--text);
+}
+
+.alert.error {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.alert.success {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.ticket-panel {
+  text-align: center;
+}
+
+.ticket-panel h2 {
+  margin-top: 8px;
+  font-size: 2rem;
+}
+
+.position-number {
+  margin-top: 24px;
+  font-size: clamp(4rem, 15vw, 6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--primary);
+}
+
+.position-label {
+  margin-top: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.footer {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.section-heading h2,
+.section-heading p {
+  margin-bottom: 4px;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.empty-state {
+  padding: 40px 12px;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+.empty-state h3 {
+  margin: 0 0 6px;
+}
+
+@media (max-width: 600px) {
+  .page-shell,
+  .staff-shell {
+    width: min(100% - 20px, 1100px);
+    padding-top: 28px;
+  }
+
+  .panel {
+    padding: 20px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .button-row .button {
+    width: 100%;
+  }
+}
